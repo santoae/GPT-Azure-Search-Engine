@@ -36,10 +36,10 @@ The repo is made to teach you step-by-step on how to build a OpenAI-based Smart 
 * A Multi-Tenant App Registration (Service Principal) must be created by the customer (save the Client Id and Secret Value).
 * Customer must provide the Microsoft Team , 10-20 questions (easy to hard) that they want the bot to respond correctly.
 * For IDE collaboration and standarization during workshop, AML compute instances with Jupyper Lab will be used, for this, Azure Machine Learning Workspace must be deployed in the RG
-   * Note: Please ensure you have enough core compute quota in your Azure Machine Learning workspace
+   * Note: Please ensure you have enough core compute quota in your Azure Machine Learning workspace 
 
 ---
-# Architecture
+# Architecture 
 ![Architecture](./images/GPT-Smart-Search-Architecture.jpg "Architecture")
 
 ## Flow
@@ -50,7 +50,7 @@ The repo is made to teach you step-by-step on how to build a OpenAI-based Smart 
    * 3b. API Endpoints - RESTful OpenAPI 3.0 API containing up-to-date statistics about Covid.
    * 3c. Azure Bing Search API - provides access to the internet allowing scenerios like: QnA on public websites .
    * 3d. Azure AI Search - contains AI-enriched documents from Blob Storage:
-       - 10,000 Arxiv Computer Science PDFs
+       - 10,000 Arxiv Computer Science PDFs  
        - 90,000 Covid publication abstracts
        - 5 lenghty PDF books
    * 3f. CSV Tabular File - contains COVID-related statistics in the US.
@@ -82,7 +82,7 @@ https://gptsmartsearchapp.azurewebsites.net/
    - Connects to API Data sources by converting natural language questions to API calls.
    - Uses CosmosDB as persistent memory to save user's conversations.
    - Uses [Streamlit](https://streamlit.io/) to build the Frontend web application in python.
-
+   
 
 ---
 
@@ -92,13 +92,13 @@ Note: (Pre-requisite) You need to have an Azure OpenAI service already created
 
 1. Fork this repo to your Github account.
 2. In Azure OpenAI studio, deploy these models (older models than the ones stated below won't work):
-   - "gpt-35-turbo-1106 (or newer)"
+   - "gpt-35-turbo-1106 (or newer)" 
    - "gpt-4-turbo-1106  (or newer)"
    - "text-embedding-ada-002 (or newer)"
 3. Create a Resource Group where all the assets of this accelerator are going to be. Azure OpenAI can be in different RG or a different Subscription.
 4. ClICK BELOW to create all the Azure Infrastructure needed to run the Notebooks (Azure AI Search, Cognitive Services, etc):
 
-[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpablomarin%2FGPT-Azure-Search-Engine%2Fmain%2Fazuredeploy.json)
+[![Deploy To Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fpablomarin%2FGPT-Azure-Search-Engine%2Fmain%2Fazuredeploy.json) 
 
 **Note**: If you have never created a `Azure AI Services Multi-Service account` before, please create one manually in the azure portal to read and accept the Responsible AI terms. Once this is deployed, delete this and then use the above deployment button.
 
@@ -121,7 +121,7 @@ You might get some pip dependancies errors, but that is ok, the libraries were i
 <details>
 
 <summary>FAQs</summary>
-
+  
 ## **FAQs**
 
 1. **Why use Azure AI Search engine to provide the context for the LLM and not fine tune the LLM instead?**
@@ -137,7 +137,7 @@ There are cases where fine-tuning is necessary, such as when the examples contai
 <details>
 
 <summary>Troubleshooting</summary>
-
+  
 ## Troubleshooting
 
 Steps to clone a private repo:
@@ -175,8 +175,8 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 ## Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft
-trademarks or logos is subject to and must follow
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
+trademarks or logos is subject to and must follow 
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
